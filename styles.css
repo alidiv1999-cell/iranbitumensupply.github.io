@@ -1,0 +1,58 @@
+```css
+
+
+p, li {
+color: #cfcfcf;
+margin-bottom: 12px;
+}
+
+
+ul {
+margin-left: 20px;
+}
+
+
+/* ---------- CTA BUTTON ---------- */
+.cta {
+display: inline-block;
+margin-top: 25px;
+padding: 14px 26px;
+background-color: #1f9d55;
+color: #ffffff;
+text-decoration: none;
+border-radius: 6px;
+font-weight: 600;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.cta:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 24px rgba(31,157,85,0.35);
+}
+
+
+/* ---------- FOOTER ---------- */
+footer {
+border-top: 1px solid #222;
+text-align: center;
+padding: 25px 15px;
+margin-top: 80px;
+font-size: 0.9rem;
+color: #888;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+nav {
+flex-wrap: wrap;
+gap: 14px;
+}
+
+
+h1 {
+font-size: 2rem;
+}
+}
+```
