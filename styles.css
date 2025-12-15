@@ -1,58 +1,69 @@
-```css
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+/* GLOBAL */
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0b0b0b;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* LAYOUT */
+header, footer {
+  background: #111;
+  padding: 20px 40px;
+}
+
+main {
+  padding: 60px 40px;
+  min-height: calc(100vh - 160px);
+}
+
+/* TEXT */
+h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
 
 p, li {
-color: #cfcfcf;
-margin-bottom: 12px;
+  font-size: 18px;
+  max-width: 800px;
 }
 
-
-ul {
-margin-left: 20px;
+/* IMAGES */
+img {
+  max-width: 100%;
+  margin: 30px 0;
+  border-radius: 6px;
 }
 
-
-/* ---------- CTA BUTTON ---------- */
-.cta {
-display: inline-block;
-margin-top: 25px;
-padding: 14px 26px;
-background-color: #1f9d55;
-color: #ffffff;
-text-decoration: none;
-border-radius: 6px;
-font-weight: 600;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* LINKS */
+a {
+  color: #00ffa6;
+  text-decoration: none;
 }
 
-
-.cta:hover {
-transform: translateY(-2px);
-box-shadow: 0 8px 24px rgba(31,157,85,0.35);
+a:hover {
+  text-decoration: underline;
 }
 
-
-/* ---------- FOOTER ---------- */
-footer {
-border-top: 1px solid #222;
-text-align: center;
-padding: 25px 15px;
-margin-top: 80px;
-font-size: 0.9rem;
-color: #888;
+/* BUTTON */
+.cta-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 26px;
+  background: #00ffa6;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
 }
-
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-nav {
-flex-wrap: wrap;
-gap: 14px;
-}
-
-
-h1 {
-font-size: 2rem;
-}
-}
-```
