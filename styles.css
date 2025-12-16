@@ -67,3 +67,17 @@ a:hover {
   font-weight: bold;
   border-radius: 4px;
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  color: #000;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
