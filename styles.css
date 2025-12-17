@@ -275,7 +275,7 @@ a:hover {
 ============================== */
 
 .inner-page .premium-cta {
-  background: linear-gradient(180deg, #1b1b1b, #111);
+  background: transparent;
   padding: 80px 20px;
   text-align: center;
 }
