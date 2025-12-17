@@ -155,3 +155,34 @@ a:hover {
   margin-bottom: 20px;
   line-height: 1.8;
 }
+
+.cta.refined {
+  text-align: center;
+  padding: 80px 10%;
+  background: #0e0e0e;
+}
+
+.cta.refined h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta.refined p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.refined-btn {
+  background: transparent;
+  border: 1px solid #25D366;
+  color: #25D366;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.refined-btn:hover {
+  background: #25D366;
+  color: #000;
+}
