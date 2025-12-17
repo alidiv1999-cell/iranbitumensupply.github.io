@@ -317,3 +317,49 @@ a:hover {
 footer {
   margin-top: 0;
 }
+
+/* ==============================
+   ABOUT PAGE SPLIT SECTION
+============================== */
+
+.inner-page .about-split {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.inner-page .about-text {
+  flex: 1;
+}
+
+.inner-page .about-text h3 {
+  color: #f5f5f5;
+  margin-top: 20px;
+}
+
+.inner-page .about-text p,
+.inner-page .about-text li {
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.inner-page .about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.inner-page .about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Mobile fallback */
+@media (max-width: 900px) {
+  .inner-page .about-split {
+    flex-direction: column;
+  }
+}
