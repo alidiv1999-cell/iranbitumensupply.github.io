@@ -157,28 +157,41 @@ a:hover {
 }
 
 .cta.refined {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   text-align: center;
   padding: 80px 10%;
   background: #0e0e0e;
 }
 
 .cta.refined h2 {
+  color: #ffffff;
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .cta.refined p {
-  color: #aaa;
-  margin-bottom: 30px;
+  color: #b5b5b5;
+  margin-bottom: 32px;
+  max-width: 600px;
 }
 
 .refined-btn {
   background: transparent;
   border: 1px solid #25D366;
   color: #25D366;
-  padding: 14px 28px;
+
+  padding: 14px 34px;
   font-size: 1rem;
   border-radius: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   transition: all 0.3s ease;
 }
 
