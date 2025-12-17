@@ -276,3 +276,17 @@ a:hover {
   background: #2f2f2f;
   text-align: center;
 }
+
+/* Fix extra space below footer on inner pages */
+.inner-page {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.inner-page .cta:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  margin-top: 0;
+}
