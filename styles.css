@@ -131,3 +131,27 @@ a:hover {
 .content.split li {
   margin-bottom: 12px;
 }
+
+.seo-story {
+  background: url("assets/refinery-gate.png") center/cover no-repeat;
+  padding: 120px 10%;
+  position: relative;
+}
+
+.seo-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 60px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  border-radius: 14px;
+}
+
+.seo-overlay h2 {
+  margin-bottom: 30px;
+}
+
+.seo-overlay p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
