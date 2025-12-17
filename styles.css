@@ -97,3 +97,37 @@ a:hover {
   font-weight: 700;
   letter-spacing: 1px;
 }
+
+.content.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 80px 10%;
+}
+
+.content.split.reverse {
+  direction: rtl;
+}
+
+.content.split.reverse .text {
+  direction: ltr;
+}
+
+.content.split img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.content.split h2 {
+  margin-bottom: 20px;
+}
+
+.content.split ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content.split li {
+  margin-bottom: 12px;
+}
