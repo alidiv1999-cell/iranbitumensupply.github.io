@@ -433,3 +433,57 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==============================
+   HERO BUTTON HOVER EFFECT
+============================== */
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 35px;
+  justify-content: center;
+}
+
+.hero-btn {
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* Primary WhatsApp Button */
+.hero-btn.primary {
+  background: linear-gradient(135deg, #2e8b57, #1f6f45);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(46, 139, 87, 0.25);
+}
+
+/* Secondary Button */
+.hero-btn.secondary {
+  background: transparent;
+  color: #f5c16c;
+  border: 1px solid rgba(245, 193, 108, 0.4);
+}
+
+/* Hover Effects */
+.hero-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Glow on hover */
+.hero-btn.primary:hover {
+  box-shadow:
+    0 0 0 2px rgba(245, 193, 108, 0.2),
+    0 18px 40px rgba(46, 139, 87, 0.45);
+}
+
+.hero-btn.secondary:hover {
+  background: rgba(245, 193, 108, 0.08);
+  box-shadow:
+    0 0 0 2px rgba(245, 193, 108, 0.25),
+    0 18px 40px rgba(0, 0, 0, 0.6);
+}
