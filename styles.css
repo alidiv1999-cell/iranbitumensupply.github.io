@@ -618,6 +618,7 @@ nav {
   margin-bottom: 12px; /* adjust spacing as needed */
 }
 
-.previous-section {
-  padding-bottom: 20px; /* creates breathing room before the email line */
+.about-text h3 {
+  margin-bottom: 20px; /* adds space after "Get in Touch" */
 }
+
