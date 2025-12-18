@@ -559,3 +559,23 @@ nav a.active::after {
   background: #f5c16c;
   border-radius: 2px;
 }
+
+.site-header {
+  width: 100%;
+  background: linear-gradient(to bottom, #000, #111);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
