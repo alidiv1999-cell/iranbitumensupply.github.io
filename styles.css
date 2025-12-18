@@ -527,3 +527,35 @@ footer {
     0 25px 50px rgba(0,0,0,0.6),
     0 0 0 2px rgba(245, 193, 108, 0.18);
 }
+
+/* ==============================
+   NAV ACTIVE STATE
+============================== */
+
+nav a {
+  color: #ccc;
+  margin-left: 24px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f5c16c;
+}
+
+/* Active page */
+nav a.active {
+  color: #f5c16c;
+}
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #f5c16c;
+  border-radius: 2px;
+}
