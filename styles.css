@@ -618,7 +618,8 @@ nav {
   margin-bottom: 12px; /* adjust spacing as needed */
 }
 
-.about-text h3 {
-  margin-bottom: 20px; /* adds space after "Get in Touch" */
+.contact-section {
+  margin-top: 12px; /* creates space above the whole contact block */
 }
+
 
