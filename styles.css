@@ -602,10 +602,11 @@ nav {
 
 /* ===== FORCE HEADER ALIGNMENT ===== */
 
-.nav-container {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end; /* move to the right */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Push left and right */
+  align-items: center; /* Vertically center items */
+  padding: 10px; /* Optional: add some padding */
 }
 
 .main-nav {
