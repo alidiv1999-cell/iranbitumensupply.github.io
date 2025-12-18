@@ -615,5 +615,6 @@ nav {
 }
 
 .contact-info {
+  margin-top: 25px; /* adds space above the whole block */
   margin-bottom: 12px; /* adjust spacing as needed */
 }
