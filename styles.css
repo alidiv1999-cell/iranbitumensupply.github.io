@@ -492,7 +492,7 @@ footer {
    HOMEPAGE FEATURE CARDS HOVER
 ============================== */
 
-.feature-cards {
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -501,7 +501,7 @@ footer {
   padding: 0 20px;
 }
 
-.feature-card {
+.card {
   background: #1f1f1f;
   border-radius: 18px;
   padding: 35px 28px;
@@ -510,18 +510,18 @@ footer {
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-.feature-card h3 {
+.card h3 {
   color: #f5c16c;
   margin-bottom: 12px;
 }
 
-.feature-card p {
+.card p {
   color: #bbb;
   line-height: 1.6;
 }
 
 /* Hover */
-.feature-card:hover {
+.card:hover {
   transform: translateY(-10px);
   box-shadow:
     0 25px 50px rgba(0,0,0,0.6),
