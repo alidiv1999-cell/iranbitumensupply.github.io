@@ -606,7 +606,6 @@ nav {
   display: flex;
   justify-content: space-between; /* Push left and right */
   align-items: center; /* Vertically center items */
-  padding: 10px; /* Optional: add some padding */
 }
 
 .main-nav {
