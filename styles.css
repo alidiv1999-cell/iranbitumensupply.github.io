@@ -613,3 +613,7 @@ nav {
   gap: 24px;
   margin-left: auto;
 }
+
+.contact-info {
+  margin-bottom: 12px; /* adjust spacing as needed */
+}
