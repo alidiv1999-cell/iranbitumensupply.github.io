@@ -85,8 +85,9 @@ a:hover {
 
 .whatsapp-float:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
-  background: #20c65a; /* slightly darker green */
+  box-shadow: 
+    0 10px 24px rgba(0,0,0,0.45), /* deeper shadow */
+    0 0 12px rgba(37, 211, 102, 0.6); /* soft green glow */
 }
 
 .logo-wrap {
