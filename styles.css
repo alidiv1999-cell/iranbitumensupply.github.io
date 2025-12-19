@@ -614,10 +614,6 @@ nav {
   margin-left: auto;
 }
 
-.contact-info:first-of-type {
-  margin-top: 20px; /* adds space above the email line */
-}
-
 .contact-info {
   margin-bottom: 12px; /* keeps spacing between email and WhatsApp */
 }
