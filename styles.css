@@ -622,3 +622,13 @@ nav {
 .contact-info.email {
   margin-top: 20px;
 }
+
+#hero-heading span {
+  display: inline-block;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#hero-heading span.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
