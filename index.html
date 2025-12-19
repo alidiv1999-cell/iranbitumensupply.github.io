@@ -323,5 +323,32 @@
 }
 </script>
 
+  <script>
+  const sentences = [
+    "Reliable Iranian Bitumen Supply for Global Infrastructure Projects",
+    "Premium Quality Bitumen for Worldwide Construction",
+    "Global Infrastructure Solutions with Iranian Bitumen",
+    "Trustworthy Iranian Bitumen for Major Projects",
+  ];
+
+  const headingSpan = document.querySelector('#hero-heading span');
+  let currentIndex = 0;
+
+  function changeHeading() {
+    // Add fade-out effect
+    headingSpan.classList.add('fade-out');
+
+    // After transition, change text and fade in
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % sentences.length;
+      headingSpan.textContent = sentences[currentIndex];
+      headingSpan.classList.remove('fade-out');
+    }, 500); // match the transition duration
+  }
+
+  // Change sentence every 5 seconds
+  setInterval(changeHeading, 5000);
+</script>
+  
 </body class="dark">
 </html>
