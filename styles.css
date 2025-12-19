@@ -755,3 +755,107 @@ nav {
     text-align: center;
   }
 }
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 16px 20px;
+  }
+
+  .hero {
+    padding: 0 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  nav a {
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .content.split,
+  .content.split.reverse {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .content.split.reverse {
+    flex-direction: column;
+  }
+
+  .content.split .text,
+  .content.split .image {
+    width: 100%;
+  }
+
+  .content.split img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+  }
+
+  .content.split .text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+
+  section {
+    padding: 60px 20px;
+  }
+}
