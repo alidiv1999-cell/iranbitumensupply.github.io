@@ -935,16 +935,3 @@ html, body {
     transform: translateY(0);
   }
 }
-
-/* Morph to X */
-.menu-toggle.open span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-
-.menu-toggle.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.open span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
