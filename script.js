@@ -16,3 +16,14 @@ const observer = new IntersectionObserver(entries => {
 });
 
 elements.forEach(el => observer.observe(el));
+
+// 🔒 Force menu closed on page load (mobile safety)
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById('navMenu');
+  const toggle = document.getElementById('menuToggle');
+
+  if (nav && toggle) {
+    nav.classList.remove('show');
+    toggle.classList.remove('open');
+  }
+});
