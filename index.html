@@ -359,9 +359,18 @@
   <script>
   const toggle = document.getElementById('menuToggle');
   const nav = document.getElementById('mainNav');
+  const navLinks = nav.querySelectorAll('a');
 
   toggle.addEventListener('click', () => {
     nav.classList.toggle('show');
+    toggle.classList.toggle('open');
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('show');
+      toggle.classList.remove('open');
+    });
   });
 </script>
 
