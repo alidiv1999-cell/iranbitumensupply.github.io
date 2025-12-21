@@ -963,3 +963,12 @@ html, body {
     padding: 70px 24px;
   }
 }
+
+/* Desktop default */
+.menu-toggle {
+  display: none;
+}
+
+nav {
+  display: flex;
+}
