@@ -885,3 +885,11 @@ html, body {
     padding: 70px 24px;
   }
 }
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--accent);
+}
