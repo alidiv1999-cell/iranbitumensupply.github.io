@@ -859,3 +859,49 @@ html, body {
     padding: 60px 20px;
   }
 }
+
+@media (max-width: 768px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    white-space: nowrap;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .seo-story {
+    padding: 60px 20px;
+    background-position: center;
+  }
+
+  .seo-overlay {
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .seo-overlay h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .seo-overlay p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
