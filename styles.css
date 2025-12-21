@@ -964,6 +964,39 @@ html, body {
   }
 }
 
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: flex;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  /* Hide nav by default */
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: rgba(14,14,15,0.98);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  /* Show nav when active */
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    margin: 14px 0;
+    font-size: 18px;
+  }
+}
+
 /* Desktop default */
 .menu-toggle {
   display: none;
