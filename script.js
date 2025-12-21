@@ -18,12 +18,25 @@ const observer = new IntersectionObserver(entries => {
 elements.forEach(el => observer.observe(el));
 
 // 🔒 Force menu closed on page load (mobile safety)
-document.addEventListener('DOMContentLoaded', () => {
-  const nav = document.getElementById('navMenu');
-  const toggle = document.getElementById('menuToggle');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("navMenu");
 
-  if (nav && toggle) {
-    nav.classList.remove('show');
-    toggle.classList.remove('open');
+  if (!toggle || !nav) {
+    console.error("Menu toggle or nav not found");
+    return;
   }
+
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("open");
+    nav.classList.toggle("show");
+  });
+
+  // Auto-close on link tap
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("show");
+      toggle.classList.remove("open");
+    });
+  });
 });
