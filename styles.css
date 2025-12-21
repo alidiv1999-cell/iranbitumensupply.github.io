@@ -893,3 +893,45 @@ html, body {
   cursor: pointer;
   color: var(--accent);
 }
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(14,14,15,0.98);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    padding: 14px 0;
+    font-size: 16px;
+  }
+
+  nav.show {
+    display: flex;
+    animation: fadeDown 0.3s ease;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
