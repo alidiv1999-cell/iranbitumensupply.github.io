@@ -963,3 +963,12 @@ html, body {
 .menu-toggle.open span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
+
+/* Desktop default */
+.menu-toggle {
+  display: none;
+}
+
+nav {
+  display: flex;
+}
