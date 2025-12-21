@@ -894,6 +894,12 @@ html, body {
   color: var(--accent);
 }
 
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
 /* Mobile navigation */
 @media (max-width: 768px) {
 
