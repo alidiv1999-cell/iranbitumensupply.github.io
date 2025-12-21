@@ -997,11 +997,12 @@ html, body {
   }
 }
 
-/* Desktop default */
+/* Desktop */
+nav {
+  display: flex;
+}
+
 .menu-toggle {
   display: none;
 }
 
-nav {
-  display: flex;
-}
