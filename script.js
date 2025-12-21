@@ -17,26 +17,4 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el));
 
-// 🔒 Force menu closed on page load (mobile safety)
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("menuToggle");
-  const nav = document.getElementById("navMenu");
 
-  if (!toggle || !nav) {
-    console.error("Menu toggle or nav not found");
-    return;
-  }
-
-  toggle.addEventListener("click", () => {
-    toggle.classList.toggle("open");
-    nav.classList.toggle("show");
-  });
-
-  // Auto-close on link tap
-  nav.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("show");
-      toggle.classList.remove("open");
-    });
-  });
-});
