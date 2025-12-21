@@ -1016,3 +1016,20 @@ nav {
   display: none;
 }
 
+/* 🔒 FORCE mobile menu CLOSED on load */
+@media (max-width: 768px) {
+  header nav {
+    display: none !important;
+  }
+
+  header nav.show {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex !important;
+  }
+}
+
