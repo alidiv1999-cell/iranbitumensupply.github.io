@@ -150,27 +150,22 @@ a:hover {
 }
 
 .seo-story {
-  background: url("assets/images/inland-refinery.png") center/cover no-repeat;
-  padding: 120px 10%;
   position: relative;
+  background: url('assets/images/inland-refinery.png') center/cover no-repeat;
+}
+
+.seo-story::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
 }
 
 .seo-overlay {
-  background: rgba(0, 0, 0, 0.75);
-  padding: 60px;
+  position: relative;
   max-width: 900px;
   margin: auto;
   text-align: center;
-  border-radius: 14px;
-}
-
-.seo-overlay h2 {
-  margin-bottom: 30px;
-}
-
-.seo-overlay p {
-  margin-bottom: 20px;
-  line-height: 1.8;
 }
 
 .cta.refined {
@@ -932,5 +927,11 @@ html, body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .seo-story {
+    padding: 70px 24px;
   }
 }
