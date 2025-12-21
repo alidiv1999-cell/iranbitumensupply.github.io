@@ -359,20 +359,20 @@
 
   <script>
   const toggle = document.getElementById('menuToggle');
-  const nav = document.getElementById('mainNav');
-  const navLinks = nav.querySelectorAll('a');
+const nav = document.getElementById('navMenu');
 
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('show');
-    toggle.classList.toggle('open');
-  });
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('show');
+  toggle.classList.toggle('open');
+});
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('show');
-      toggle.classList.remove('open');
-    });
+// Auto-close on link tap
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('show');
+    toggle.classList.remove('open');
   });
+});
 </script>
 
 </body class="dark">
