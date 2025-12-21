@@ -358,24 +358,6 @@
 
   <script>
   const toggle = document.getElementById('menuToggle');
-const nav = document.getElementById('navMenu');
-
-toggle.addEventListener('click', () => {
-  nav.classList.toggle('show');
-  toggle.classList.toggle('open');
-});
-
-// Auto-close on link tap
-nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('show');
-    toggle.classList.remove('open');
-  });
-});
-</script>
-
-  <script>
-  const toggle = document.getElementById('menuToggle');
   const nav = document.getElementById('mainNav');
 
   toggle.addEventListener('click', () => {
