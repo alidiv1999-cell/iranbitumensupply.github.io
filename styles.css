@@ -862,27 +862,6 @@ html, body {
 
 @media (max-width: 768px) {
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    white-space: nowrap;
-  }
-
-  nav a {
-    margin-left: 0;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-
   .seo-story {
     padding: 60px 20px;
     background-position: center;
