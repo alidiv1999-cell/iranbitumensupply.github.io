@@ -354,6 +354,15 @@
   // Change sentence every 5 seconds
   setInterval(changeHeading, 5000);
 </script>
-  
+
+  <script>
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('mainNav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
+
 </body class="dark">
 </html>
