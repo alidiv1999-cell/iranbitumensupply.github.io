@@ -24,19 +24,6 @@ header, footer {
   padding: 20px 40px;
 }
 
-/* Make sure the container is inline-flex for horizontal alignment */
-.logo-text-container {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* space between logo and text */
-}
-
-/* Optional: style the logo size */
-.navbar-logo {
-  height: 30px; /* or any size that fits your design */
-  width: auto;
-}
-
 main {
   padding: 60px 40px;
   min-height: calc(100vh - 160px);
