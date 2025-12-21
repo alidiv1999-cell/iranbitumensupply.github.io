@@ -963,10 +963,3 @@ html, body {
 .menu-toggle.open span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
-
-/* Hide on desktop */
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none !important;
-  }
-}
