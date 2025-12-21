@@ -963,3 +963,17 @@ html, body {
 .menu-toggle.open span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
+
+/* Hide hamburger button on screens wider than 768px (desktop) */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Show hamburger button on screens smaller than 768px (mobile) */
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block; /* or inline-block, depending on your layout */
+  }
+}
