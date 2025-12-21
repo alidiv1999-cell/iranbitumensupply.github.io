@@ -888,7 +888,7 @@ html, body {
 
 /* Hamburger hidden on desktop */
 .menu-toggle {
-  display: none;
+  display: flex;
   font-size: 26px;
   cursor: pointer;
   color: var(--accent);
