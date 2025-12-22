@@ -225,6 +225,105 @@ a:hover {
 }
 
 /* ==============================
+   COUNTRY TARGETING SECTION
+============================== */
+
+.country-targeting {
+  background: #0e0e0e;
+  padding: 90px 20px;
+}
+
+.country-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.country-targeting h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.country-intro {
+  max-width: 780px;
+  margin: 0 auto 50px;
+  font-size: 17px;
+  color: #b5b5b5;
+  line-height: 1.7;
+}
+
+/* Grid */
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Cards */
+.country-card {
+  background: #1a1a1a;
+  border-radius: 18px;
+  padding: 30px 26px;
+  text-align: left;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.country-card h3 {
+  color: #f5c16c;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.country-card p {
+  color: #c9c9c9;
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+
+/* Hover animation */
+.country-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 25px 50px rgba(0,0,0,0.6),
+    0 0 0 2px rgba(245, 193, 108, 0.18);
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 1100px) {
+  .country-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .country-targeting {
+    padding: 70px 20px;
+  }
+
+  .country-targeting h2 {
+    font-size: 26px;
+  }
+
+  .country-intro {
+    font-size: 15.5px;
+    margin-bottom: 36px;
+  }
+
+  .country-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .country-card {
+    text-align: center;
+  }
+}
+
+/* ==============================
    INNER PAGES ONLY
 ============================== */
 
