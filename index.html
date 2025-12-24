@@ -534,7 +534,7 @@ document.querySelectorAll('a[href]').forEach(link => {
   });
 </script>
 
-  <script type="application/ld+json">
+ <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -551,6 +551,14 @@ document.querySelectorAll('a[href]').forEach(link => {
   },
   "category": "Construction Materials",
   "material": "Bitumen",
+
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.iranbitumensupply.com/contact.html",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "USD"
+  },
+
   "additionalProperty": [
     {
       "@type": "PropertyValue",
@@ -568,26 +576,15 @@ document.querySelectorAll('a[href]').forEach(link => {
       "value": "Drum, Jumbo Bag, Bulk Vessel"
     }
   ],
+
   "areaServed": [
-    {
-      "@type": "Country",
-      "name": "India"
-    },
-    {
-      "@type": "Continent",
-      "name": "Asia"
-    },
-    {
-      "@type": "Continent",
-      "name": "Africa"
-    },
-    {
-      "@type": "Region",
-      "name": "Middle East"
-    }
+    { "@type": "Country", "name": "India" },
+    { "@type": "Continent", "name": "Asia" },
+    { "@type": "Continent", "name": "Africa" },
+    { "@type": "Region", "name": "Middle East" }
   ]
 }
 </script>
-
+ 
 </body class="dark">
 </html>
