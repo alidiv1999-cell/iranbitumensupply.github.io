@@ -537,52 +537,36 @@ document.querySelectorAll('a[href]').forEach(link => {
  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Iranian Bitumen 60/70",
-  "description": "Premium Iranian Bitumen 60/70 supplied for road construction and industrial use. Bulk export available for buyers in India, Asia, Africa, and the Middle East.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Iran Bitumen Supply"
-  },
-  "manufacturer": {
+  "@type": "Service",
+  "name": "Iranian Bitumen Export Supply",
+  "description": "Bulk export supply of Iranian Bitumen 60/70, VG grades, and oxidized bitumen for infrastructure projects worldwide.",
+  "provider": {
     "@type": "Organization",
     "name": "Iran Bitumen Supply",
     "url": "https://www.iranbitumensupply.com/"
   },
-  "category": "Construction Materials",
-  "material": "Bitumen",
-
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.iranbitumensupply.com/contact.html",
-    "availability": "https://schema.org/InStock",
-    "priceCurrency": "USD"
-  },
-
-  "additionalProperty": [
-    {
-      "@type": "PropertyValue",
-      "name": "Supply Type",
-      "value": "Bulk Export"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Payment Terms",
-      "value": "FOB, CFR, CIF"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Packaging",
-      "value": "Drum, Jumbo Bag, Bulk Vessel"
-    }
-  ],
-
+  "serviceType": "Bitumen Export & Supply",
   "areaServed": [
     { "@type": "Country", "name": "India" },
     { "@type": "Continent", "name": "Asia" },
     { "@type": "Continent", "name": "Africa" },
     { "@type": "Region", "name": "Middle East" }
-  ]
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bitumen Export Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Iranian Bitumen 60/70 Bulk Export"
+        },
+        "url": "https://www.iranbitumensupply.com/contact.html",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
 }
 </script>
  
