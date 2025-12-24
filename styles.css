@@ -229,57 +229,71 @@ a:hover {
 ============================== */
 
 .country-targeting {
+  padding: 80px 20px;
   background: #0e0e0e;
-  padding: 90px 20px;
 }
 
 .country-container {
   max-width: 1200px;
-  margin: auto;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .country-targeting h2 {
-  font-size: 34px;
+  text-align: center;
+  font-size: 2.2rem;
   margin-bottom: 16px;
   color: #ffffff;
 }
 
 .country-intro {
-  max-width: 780px;
+  text-align: center;
+  max-width: 800px;
   margin: 0 auto 50px;
-  font-size: 17px;
-  color: #b5b5b5;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #cfcfcf;
 }
 
-/* Grid */
 .country-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
 }
 
-/* Cards */
 .country-card {
-  background: #1a1a1a;
-  border-radius: 18px;
-  padding: 30px 26px;
-  text-align: left;
-  transition: all 0.35s ease;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  background: #141414;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .country-card h3 {
-  color: #f5c16c;
-  margin-bottom: 12px;
-  font-size: 20px;
+  margin-bottom: 14px;
+  font-size: 1.25rem;
+  color: #ffffff;
 }
 
 .country-card p {
-  color: #c9c9c9;
-  font-size: 15.5px;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+.geo-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #9e9e9e;
+}
+
+.geo-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: #00ffd5;
+  text-decoration: none;
+}
+
+.geo-link:hover {
+  text-decoration: underline;
 }
 
 /* Hover animation */
