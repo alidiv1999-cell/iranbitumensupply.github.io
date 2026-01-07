@@ -1183,3 +1183,87 @@ body.fade-out {
     font-size: 16px;
   }
 }
+
+/* =========================
+   Product Catalog Section
+========================= */
+
+.catalog-section {
+  background: #0f1115;
+  padding: 80px 20px;
+}
+
+.catalog-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.catalog-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.catalog-intro {
+  color: #c7c7c7;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+/* Catalog Card */
+
+.catalog-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 30px 35px;
+  background: #151821;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.catalog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
+}
+
+.catalog-icon {
+  font-size: 2.5rem;
+}
+
+.catalog-text h3 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+}
+
+.catalog-text span {
+  color: #a8b0c2;
+  font-size: 0.95rem;
+}
+
+.catalog-action {
+  font-size: 1.8rem;
+  opacity: 0.7;
+  transition: transform 0.3s ease;
+}
+
+.catalog-card:hover .catalog-action {
+  transform: translateX(6px);
+  opacity: 1;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .catalog-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
