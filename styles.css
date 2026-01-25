@@ -1334,3 +1334,21 @@ body.fade-out {
     font-size: 16px;
   }
 }
+
+.blog-link-list {
+  margin: 20px 0 30px 20px;
+}
+
+.blog-link-list li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.blog-cta a {
+  color: #00ffa6;
+  font-weight: 600;
+}
+
+.blog-cta a:hover {
+  text-decoration: underline;
+}
