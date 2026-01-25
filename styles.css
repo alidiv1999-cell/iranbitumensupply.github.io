@@ -1267,3 +1267,51 @@ body.fade-out {
     text-align: center;
   }
 }
+
+.blog-hero {
+  padding: 160px 24px 80px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.blog-hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.blog-hero p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.blog-list {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 24px 100px;
+}
+
+.blog-card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  transition: transform 0.25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-card h2 {
+  margin-bottom: 10px;
+}
+
+.blog-card a {
+  color: var(--accent);
+}
+
+.blog-meta {
+  font-size: 14px;
+  color: var(--muted);
+}
