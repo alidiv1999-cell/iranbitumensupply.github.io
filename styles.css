@@ -1267,3 +1267,70 @@ body.fade-out {
     text-align: center;
   }
 }
+
+/* =========================
+   BLOG PAGE STYLES
+========================= */
+
+.blog-container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.blog-article {
+  margin-bottom: 100px;
+}
+
+.blog-article h2 {
+  font-size: 30px;
+  color: #f5c16c;
+  margin-bottom: 20px;
+}
+
+.blog-article h3 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.blog-article p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 18px;
+}
+
+.blog-image {
+  margin: 40px 0;
+}
+
+.blog-image img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.blog-cta {
+  margin-top: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  border-left: 4px solid #f5c16c;
+  padding-left: 16px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .blog-article h2 {
+    font-size: 24px;
+  }
+
+  .blog-article h3 {
+    font-size: 18px;
+  }
+
+  .blog-article p {
+    font-size: 16px;
+  }
+}
