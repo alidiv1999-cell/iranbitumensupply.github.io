@@ -18,31 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   elements.forEach((el) => observer.observe(el));
 
-  const header = document.querySelector('header');
-  const nav = header?.querySelector('nav');
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('mainNav');
 
-  if (!header || !nav) {
+  if (!toggle || !nav) {
     return;
-  }
-
-  if (!nav.id) {
-    nav.id = 'mainNav';
-  }
-
-  let toggle = header.querySelector('#menuToggle, .menu-toggle');
-
-  if (!toggle) {
-    toggle = document.createElement('button');
-    toggle.type = 'button';
-    toggle.className = 'menu-toggle';
-    toggle.id = 'menuToggle';
-    toggle.setAttribute('aria-label', 'Toggle navigation menu');
-    toggle.setAttribute('aria-expanded', 'false');
-
-    toggle.innerHTML = '<span></span><span></span><span></span>';
-
-    const container = header.querySelector('.header-container') || header;
-    container.appendChild(toggle);
   }
 
   const navLinks = nav.querySelectorAll('a');
@@ -52,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
   };
+
+  toggle.setAttribute('aria-expanded', 'false');
 
   toggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('show');
