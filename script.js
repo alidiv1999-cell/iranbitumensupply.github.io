@@ -1,20 +1,53 @@
-const elements = document.querySelectorAll('h1, p, img');
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('h1, p, img');
 
-elements.forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = 'translateY(20px)';
-});
+  elements.forEach((el) => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(20px)';
+  });
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.transition = 'all 0.6s ease';
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'all 0.6s ease';
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  });
+
+  elements.forEach((el) => observer.observe(el));
+
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('mainNav');
+
+  if (!toggle || !nav) {
+    return;
+  }
+
+  const navLinks = nav.querySelectorAll('a');
+
+  const closeMenu = () => {
+    nav.classList.remove('show');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle.setAttribute('aria-expanded', 'false');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('show');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      closeMenu();
     }
   });
 });
-
-elements.forEach(el => observer.observe(el));
-
-
