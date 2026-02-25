@@ -30,11 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeMenu = () => {
     nav.classList.remove('show');
     toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
   };
 
+  toggle.setAttribute('aria-expanded', 'false');
+
   toggle.addEventListener('click', () => {
-    nav.classList.toggle('show');
-    toggle.classList.toggle('open');
+    const isOpen = nav.classList.toggle('show');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
   });
 
   navLinks.forEach((link) => {
