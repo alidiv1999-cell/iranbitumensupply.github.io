@@ -507,6 +507,11 @@ footer {
   padding: 0 20px;
 }
 
+.inner-page .packaging-cards {
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  max-width: 900px;
+}
+
 .inner-page .product-card {
   background: #1f1f1f;
   border-radius: 16px;
