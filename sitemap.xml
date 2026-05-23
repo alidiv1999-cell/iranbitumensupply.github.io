@@ -206,4 +206,30 @@
     <priority>0.8</priority>
   </url>
 
+
+  <url>
+    <loc>https://www.iranbitumensupply.com/packagings.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.iranbitumensupply.com/packagings/steel-drums.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.iranbitumensupply.com/packagings/jumbo-bags.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.iranbitumensupply.com/packagings/flexitank.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.iranbitumensupply.com/packagings/bulk-shipment.html</loc>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
