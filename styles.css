@@ -236,8 +236,8 @@ a:hover {
 .overlay-copy-card {
   max-width: 980px;
   margin: 0 auto;
-  background: linear-gradient(145deg, #4b5563 0%, #374151 100%);
-  border: 1px solid #e6ebf2;
+  background: linear-gradient(145deg, #171b22 0%, #0b0f14 100%);
+  border: none;
   border-radius: 16px;
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.09);
   padding: 34px 36px;
