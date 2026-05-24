@@ -226,6 +226,7 @@ a:hover {
   height: auto;
   display: block;
   object-fit: cover;
+  margin: 0;
 }
 
 .overlay-copy {
