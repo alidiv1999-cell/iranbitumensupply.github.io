@@ -229,7 +229,7 @@ a:hover {
 }
 
 .overlay-copy {
-  margin: 40px auto;
+  margin: -10px auto 50px;
   padding: 0 10%;
 }
 
@@ -1072,7 +1072,7 @@ html, body {
 @media (max-width: 768px) {
 
   .overlay-copy {
-    margin: 32px auto;
+    margin: 0 auto 40px;
     padding: 0 20px;
   }
 
