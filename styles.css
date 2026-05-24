@@ -245,6 +245,7 @@ a:hover {
 
 .overlay-copy-card p {
   margin: 0 auto 16px;
+  margin-bottom: 16px;
   color: #ffffff;
   line-height: 1.8;
   text-align: center;
