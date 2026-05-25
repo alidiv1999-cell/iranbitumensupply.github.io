@@ -91,11 +91,17 @@ a:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   z-index: 999;
   cursor: pointer;
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+  transition: --wa-lift 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
   --wa-lift: 0px;
   animation: whatsappVibrate 4s ease-in-out infinite;
 }
 
+
+@property --wa-lift {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
 
 @keyframes whatsappVibrate {
   0%, 88%, 100% { transform: translateY(var(--wa-lift, 0px)) translateX(0) rotate(0deg); }

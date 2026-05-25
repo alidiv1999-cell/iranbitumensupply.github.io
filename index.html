@@ -147,7 +147,7 @@
       font-weight: 700;
       z-index: 999;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+      transition: --wa-lift 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
       --wa-lift: 0px;
       animation: whatsappVibrate 4s ease-in-out infinite;
     }
@@ -160,6 +160,12 @@
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+        @property --wa-lift {
+      syntax: "<length>";
+      inherits: false;
+      initial-value: 0px;
     }
 
     @keyframes whatsappVibrate {
