@@ -92,7 +92,7 @@ a:hover {
   z-index: 999;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  animation: whatsappVibrate 5s ease-in-out infinite;
+  animation: whatsappVibrate 4s ease-in-out infinite;
 }
 
 
@@ -111,9 +111,9 @@ a:hover {
   }
 }
 .whatsapp-float:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
   box-shadow: 
-    0 10px 24px rgba(0,0,0,0.45), /* deeper shadow */
+    0 14px 28px rgba(0,0,0,0.5), /* deeper shadow */
     0 0 16px rgba(37, 211, 102, 0.6), /* stronger green glow */
     0 0 32px rgba(37, 211, 102, 0.6); /* wider soft glow */
 }
