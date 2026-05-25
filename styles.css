@@ -111,6 +111,7 @@ a:hover {
   }
 }
 .whatsapp-float:hover {
+  animation-play-state: paused;
   transform: translateY(-5px);
   box-shadow: 
     0 14px 28px rgba(0,0,0,0.5), /* deeper shadow */
