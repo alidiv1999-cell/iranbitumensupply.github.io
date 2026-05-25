@@ -90,14 +90,31 @@ a:hover {
   font-weight: bold;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   z-index: 999;
-  cursor: pointer; 
-  transition: transform 0.25s ease, box-shadow 0.25s ease; 
+  cursor: pointer;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+  --wa-lift: 0px;
+  animation: whatsappVibrate 4s ease-in-out infinite;
 }
 
+
+@keyframes whatsappVibrate {
+  0%, 88%, 100% { transform: translateY(var(--wa-lift, 0px)) translateX(0) rotate(0deg); }
+  90% { transform: translateY(var(--wa-lift, 0px)) translateX(-1.5px) rotate(-1deg); }
+  92% { transform: translateY(var(--wa-lift, 0px)) translateX(1.5px) rotate(1deg); }
+  94% { transform: translateY(var(--wa-lift, 0px)) translateX(-1px) rotate(-0.7deg); }
+  96% { transform: translateY(var(--wa-lift, 0px)) translateX(1px) rotate(0.7deg); }
+  98% { transform: translateY(var(--wa-lift, 0px)) translateX(0) rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    animation: none;
+  }
+}
 .whatsapp-float:hover {
-  transform: translateY(-3px);
+  --wa-lift: -5px;
   box-shadow: 
-    0 10px 24px rgba(0,0,0,0.45), /* deeper shadow */
+    0 14px 28px rgba(0,0,0,0.5), /* deeper shadow */
     0 0 16px rgba(37, 211, 102, 0.6), /* stronger green glow */
     0 0 32px rgba(37, 211, 102, 0.6); /* wider soft glow */
 }
