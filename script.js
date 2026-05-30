@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ],
         },
         {
-          heading: 'Modified & cutback',
+          heading: 'Modified bitumen',
           links: [
             ['PMB Elastomeric', 'products/elastomeric-pmb.html'],
             ['PMB Plastomeric', 'products/plastomeric-pmb.html'],
@@ -64,7 +64,33 @@ document.addEventListener('DOMContentLoaded', () => {
             ['CRMB 50', 'products/crmb-50-cold-climate.html'],
             ['CRMB 55', 'products/crmb-55-moderate-climate.html'],
             ['CRMB 60', 'products/crmb-60-warm-climate.html'],
-            ['MC / RC / SC grades', 'products.html'],
+          ],
+        },
+        {
+          heading: 'Performance grade',
+          links: [
+            ['PG 70-16', 'products/pg70-16.html'],
+            ['PG 70-10', 'products/pg70-10.html'],
+            ['PG 64-16', 'products/pg64-16.html'],
+            ['PG 64-22', 'products/pg64-22.html'],
+            ['PG 58-34', 'products/pg58-34.html'],
+          ],
+        },
+        {
+          heading: 'Cutback MC / RC / SC',
+          links: [
+            ['MC-30 Bitumen', 'products/mc-30-bitumen.html'],
+            ['MC-70 Bitumen', 'products/mc-70-bitumen.html'],
+            ['MC-250 Bitumen', 'products/mc-250-bitumen.html'],
+            ['MC-800 Bitumen', 'products/mc-800-bitumen.html'],
+            ['RC70', 'products/rc70.html'],
+            ['RC250', 'products/rc250.html'],
+            ['RC800', 'products/rc800.html'],
+            ['RC3000', 'products/rc3000.html'],
+            ['SC70', 'products/sc70.html'],
+            ['SC250', 'products/sc250.html'],
+            ['SC800', 'products/sc800.html'],
+            ['SC3000', 'products/sc3000.html'],
           ],
         },
       ],
