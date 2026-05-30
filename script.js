@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ],
         },
         {
-          heading: 'MC cutback',
+          heading: 'MC cutback Bitumen',
           links: [
             ['MC-30 Bitumen', 'products/mc-30-bitumen.html'],
             ['MC-70 Bitumen', 'products/mc-70-bitumen.html'],
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ],
         },
         {
-          heading: 'RC cutback',
+          heading: 'RC cutback Bitumen',
           links: [
             ['RC70', 'products/rc70.html'],
             ['RC250', 'products/rc250.html'],
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ],
         },
         {
-          heading: 'SC cutback',
+          heading: 'SC cutback Bitumen',
           links: [
             ['SC70', 'products/sc70.html'],
             ['SC250', 'products/sc250.html'],
