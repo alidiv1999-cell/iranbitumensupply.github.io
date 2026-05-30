@@ -1341,6 +1341,7 @@ html, body {
 
   nav a {
     display: block;
+    margin-left: 0;
     padding: 14px 0;
     font-size: 16px;
   }
@@ -1351,53 +1352,22 @@ html, body {
   }
 
   .nav-dropdown {
-    width: min(92%, 420px);
-    flex-direction: column;
-    align-items: stretch;
-    margin: 0 auto;
+    width: 100%;
+    display: block;
+    margin: 0;
   }
 
-  .nav-dropdown::after {
-    display: none;
+  .nav-dropdown::after,
+  .nav-dropdown-trigger::before,
+  .nav-dropdown-panel {
+    display: none !important;
   }
 
   nav .nav-dropdown-trigger {
     justify-content: center;
     margin-left: 0;
-    padding: 12px 0 8px;
-  }
-
-  .nav-dropdown-panel,
-  .nav-dropdown--wide .nav-dropdown-panel,
-  .nav-dropdown--right .nav-dropdown-panel {
-    position: static;
-    width: 100%;
-    min-width: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin: 4px 0 12px;
-    padding: 14px;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    pointer-events: auto;
-    border-radius: 16px;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.34);
-  }
-
-  .nav-dropdown-panel::before {
-    display: none;
-  }
-
-  .nav-dropdown-heading {
-    text-align: left;
-  }
-
-  nav .nav-dropdown-panel a {
-    text-align: left;
-    padding: 10px 12px;
-    font-size: 14px;
+    padding: 14px 0;
+    gap: 0;
   }
 }
 
