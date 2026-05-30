@@ -1806,3 +1806,106 @@ body.fade-out {
     font-size: 1.2rem;
   }
 }
+
+/* ==============================
+   HOMEPAGE RELATED PRODUCTS CTA
+============================== */
+
+.related-products-referral {
+  padding: 0 80px 90px;
+  background: transparent;
+}
+
+.related-products-referral__card {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 38px 42px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top left, rgba(245, 193, 108, 0.16), transparent 36%),
+    linear-gradient(145deg, rgba(27, 27, 29, 0.98), rgba(10, 10, 11, 0.98));
+  border: 1px solid rgba(245, 193, 108, 0.18);
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+}
+
+.related-products-referral__card p {
+  max-width: 850px;
+  margin: 0 auto 28px;
+  color: #d8d8d8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.related-products-referral__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 32px;
+  color: #111;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  background: linear-gradient(135deg, #f5c16c, #c9a25d);
+  border-radius: 999px;
+  box-shadow: 0 14px 32px rgba(201, 162, 93, 0.24);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.related-products-referral__cta::after {
+  content: "→";
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.related-products-referral__cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.34) 50%, transparent 100%);
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+}
+
+.related-products-referral__cta:hover,
+.related-products-referral__cta:focus {
+  color: #000;
+  text-decoration: none;
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #ffd99b, #f5c16c);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.45),
+    0 0 0 2px rgba(245, 193, 108, 0.28),
+    0 0 26px rgba(245, 193, 108, 0.35);
+}
+
+.related-products-referral__cta:hover::before,
+.related-products-referral__cta:focus::before {
+  transform: translateX(120%);
+}
+
+.related-products-referral__cta:hover::after,
+.related-products-referral__cta:focus::after {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .related-products-referral {
+    padding: 0 24px 80px;
+  }
+
+  .related-products-referral__card {
+    padding: 30px 22px;
+  }
+
+  .related-products-referral__card p {
+    font-size: 1rem;
+  }
+
+  .related-products-referral__cta {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
