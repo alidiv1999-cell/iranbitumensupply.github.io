@@ -1813,7 +1813,7 @@ body.fade-out {
 
 .related-products-referral {
   padding: 0 80px 90px;
-  background: #000;
+  background: transparent;
 }
 
 .related-products-referral__card {
