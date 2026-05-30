@@ -77,16 +77,26 @@ document.addEventListener('DOMContentLoaded', () => {
           ],
         },
         {
-          heading: 'Cutback MC / RC / SC',
+          heading: 'MC cutback',
           links: [
             ['MC-30 Bitumen', 'products/mc-30-bitumen.html'],
             ['MC-70 Bitumen', 'products/mc-70-bitumen.html'],
             ['MC-250 Bitumen', 'products/mc-250-bitumen.html'],
             ['MC-800 Bitumen', 'products/mc-800-bitumen.html'],
+          ],
+        },
+        {
+          heading: 'RC cutback',
+          links: [
             ['RC70', 'products/rc70.html'],
             ['RC250', 'products/rc250.html'],
             ['RC800', 'products/rc800.html'],
             ['RC3000', 'products/rc3000.html'],
+          ],
+        },
+        {
+          heading: 'SC cutback',
+          links: [
             ['SC70', 'products/sc70.html'],
             ['SC250', 'products/sc250.html'],
             ['SC800', 'products/sc800.html'],
