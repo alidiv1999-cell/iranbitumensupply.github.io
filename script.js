@@ -140,22 +140,17 @@ document.addEventListener('DOMContentLoaded', () => {
       label: 'Commodity categories',
       columns: [
         {
-          heading: 'Petrochemical & refinery',
+          heading: 'All related commodities',
           links: [
+            ['Micronized gilsonite', 'related-commodities/micronized-gilsonite-powder.html'],
             ['EN590 10ppm diesel', 'related-commodities/en590-10ppm-diesel.html'],
             ['Granular sulfur', 'related-commodities/granular-sulfur.html'],
+            ['Urea 46 fertilizer', 'related-commodities/urea-46-fertilizer.html'],
             ['LPG (Liquefied Petroleum Gas)', 'related-commodities/lpg-liquefied-petroleum-gas.html'],
             ['Base Oil SN 500', 'related-commodities/base-oil-sn-500.html'],
-            ['Micronized gilsonite', 'related-commodities/micronized-gilsonite-powder.html'],
+            ['Fully refined paraffin wax', 'related-commodities/fully-refined-paraffin-wax.html'],
             ['Slack wax', 'related-commodities/slack-wax.html'],
             ['Polyethylene wax', 'related-commodities/polyethylene-wax.html'],
-            ['Fully refined paraffin wax', 'related-commodities/fully-refined-paraffin-wax.html'],
-          ],
-        },
-        {
-          heading: 'Industrial & agricultural',
-          links: [
-            ['Urea 46 fertilizer', 'related-commodities/urea-46-fertilizer.html'],
           ],
         },
       ],
