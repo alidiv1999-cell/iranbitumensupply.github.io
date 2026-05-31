@@ -144,6 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
           links: [
             ['EN590 10ppm diesel', 'related-commodities/en590-10ppm-diesel.html'],
             ['Granular sulfur', 'related-commodities/granular-sulfur.html'],
+            ['LPG (Liquefied Petroleum Gas)', 'related-commodities/lpg-liquefied-petroleum-gas.html'],
+            ['Base Oil SN 500', 'related-commodities/base-oil-sn-500.html'],
             ['Micronized gilsonite', 'related-commodities/micronized-gilsonite-powder.html'],
             ['Slack wax', 'related-commodities/slack-wax.html'],
             ['Polyethylene wax', 'related-commodities/polyethylene-wax.html'],
@@ -154,8 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
           heading: 'Industrial & agricultural',
           links: [
             ['Urea 46 fertilizer', 'related-commodities/urea-46-fertilizer.html'],
-            ['Dense soda ash', 'related-commodities/dense-soda-ash.html'],
-            ['Calcium chloride', 'related-commodities/calcium-chloride.html'],
           ],
         },
       ],
