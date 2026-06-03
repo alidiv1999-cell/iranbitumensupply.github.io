@@ -18,6 +18,116 @@ document.addEventListener('DOMContentLoaded', () => {
 
   elements.forEach((el) => observer.observe(el));
 
+  const brentWidgetCard = document.querySelector('[data-brent-widget]');
+
+  if (brentWidgetCard) {
+    const widgetContainer = brentWidgetCard.querySelector('.tradingview-widget-container');
+    const widgetTarget = brentWidgetCard.querySelector('[data-brent-widget-target]');
+    const mobileMediaQuery = window.matchMedia('(max-width: 768px)');
+    let activeBrentWidgetVariant = '';
+
+    const desktopBrentWidget = {
+      src: 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js',
+      config: {
+        lineWidth: 2,
+        lineType: 0,
+        chartType: 'area',
+        fontColor: '#c8c8c8',
+        gridLineColor: 'rgba(245, 193, 108, 0.08)',
+        volumeUpColor: 'rgba(37, 211, 102, 0.35)',
+        volumeDownColor: 'rgba(247, 82, 95, 0.35)',
+        backgroundColor: '#101010',
+        widgetFontColor: '#eaeaea',
+        upColor: '#25d366',
+        downColor: '#f7525f',
+        borderUpColor: '#25d366',
+        borderDownColor: '#f7525f',
+        wickUpColor: '#25d366',
+        wickDownColor: '#f7525f',
+        colorTheme: 'dark',
+        isTransparent: false,
+        locale: 'en',
+        chartOnly: false,
+        scalePosition: 'right',
+        scaleMode: 'Normal',
+        fontFamily: 'Inter, Arial, sans-serif',
+        valuesTracking: '1',
+        changeMode: 'price-and-percent',
+        symbols: [
+          [
+            'Brent Crude Oil',
+            'TVC:UKOIL|1D',
+          ],
+        ],
+        dateRanges: [
+          '1d|1',
+          '1m|30',
+          '3m|60',
+          '12m|1D',
+          '60m|1W',
+          'all|1M',
+        ],
+        fontSize: '10',
+        headerFontSize: 'medium',
+        autosize: true,
+        width: '100%',
+        height: '100%',
+        noTimeScale: false,
+        hideDateRanges: false,
+        hideMarketStatus: false,
+        hideSymbolLogo: false,
+      },
+    };
+
+    const mobileBrentWidget = {
+      src: 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js',
+      config: {
+        symbol: 'TVC:UKOIL',
+        chartOnly: false,
+        dateRange: '12M',
+        noTimeScale: false,
+        colorTheme: 'dark',
+        isTransparent: false,
+        locale: 'en',
+        backgroundColor: '#101010',
+        autosize: true,
+        width: '100%',
+        height: '100%',
+      },
+    };
+
+    const renderBrentWidget = () => {
+      const isMobile = mobileMediaQuery.matches;
+      const variant = isMobile ? 'mobile' : 'desktop';
+
+      if (variant === activeBrentWidgetVariant || !widgetContainer || !widgetTarget) {
+        return;
+      }
+
+      activeBrentWidgetVariant = variant;
+      widgetTarget.innerHTML = '';
+      widgetContainer.querySelectorAll('[data-brent-widget-script]').forEach((script) => script.remove());
+      brentWidgetCard.classList.toggle('brent-widget-card--mobile', isMobile);
+
+      const widget = isMobile ? mobileBrentWidget : desktopBrentWidget;
+      const widgetScript = document.createElement('script');
+      widgetScript.type = 'text/javascript';
+      widgetScript.src = widget.src;
+      widgetScript.async = true;
+      widgetScript.dataset.brentWidgetScript = variant;
+      widgetScript.text = JSON.stringify(widget.config, null, 2);
+      widgetContainer.appendChild(widgetScript);
+    };
+
+    renderBrentWidget();
+
+    if (typeof mobileMediaQuery.addEventListener === 'function') {
+      mobileMediaQuery.addEventListener('change', renderBrentWidget);
+    } else if (typeof mobileMediaQuery.addListener === 'function') {
+      mobileMediaQuery.addListener(renderBrentWidget);
+    }
+  }
+
   const toggle = document.getElementById('menuToggle');
   const nav = document.getElementById('mainNav');
 
