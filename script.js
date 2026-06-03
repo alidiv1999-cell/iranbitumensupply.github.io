@@ -28,76 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMediaQuery = window.matchMedia('(max-width: 768px)');
     let activeBrentWidgetVariant = '';
     let fallbackTimer;
-    let widgetLoadTimeout;
-
-    const desktopBrentWidget = {
-      src: 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js',
-      config: {
-        lineWidth: 2,
-        lineType: 0,
-        chartType: 'area',
-        fontColor: '#c8c8c8',
-        gridLineColor: 'rgba(245, 193, 108, 0.08)',
-        volumeUpColor: 'rgba(37, 211, 102, 0.35)',
-        volumeDownColor: 'rgba(247, 82, 95, 0.35)',
-        backgroundColor: '#101010',
-        widgetFontColor: '#eaeaea',
-        upColor: '#25d366',
-        downColor: '#f7525f',
-        borderUpColor: '#25d366',
-        borderDownColor: '#f7525f',
-        wickUpColor: '#25d366',
-        wickDownColor: '#f7525f',
-        colorTheme: 'dark',
-        isTransparent: false,
-        locale: 'en',
-        chartOnly: false,
-        scalePosition: 'right',
-        scaleMode: 'Normal',
-        fontFamily: 'Inter, Arial, sans-serif',
-        valuesTracking: '1',
-        changeMode: 'price-and-percent',
-        symbols: [
-          [
-            'Brent Crude Oil',
-            'TVC:UKOIL|1D',
-          ],
-        ],
-        dateRanges: [
-          '1d|1',
-          '1m|30',
-          '3m|60',
-          '12m|1D',
-          '60m|1W',
-          'all|1M',
-        ],
-        fontSize: '10',
-        headerFontSize: 'medium',
-        autosize: true,
-        width: '100%',
-        height: '100%',
-        noTimeScale: false,
-        hideDateRanges: false,
-        hideMarketStatus: false,
-      },
-    };
-
-    const mobileBrentWidget = {
-      src: 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js',
-      config: {
-        symbol: 'TVC:UKOIL',
-        chartOnly: false,
-        dateRange: '12M',
-        noTimeScale: false,
-        colorTheme: 'dark',
-        isTransparent: false,
-        locale: 'en',
-        backgroundColor: '#101010',
-        autosize: true,
-        width: '100%',
-        height: '100%',
-      },
-    };
 
     const showBrentFallback = () => {
       activeBrentWidgetVariant = '';
@@ -120,55 +50,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
       activeBrentWidgetVariant = variant;
       clearTimeout(fallbackTimer);
-      clearTimeout(widgetLoadTimeout);
       hideBrentFallback();
       widgetTarget.innerHTML = '';
       widgetContainer.querySelectorAll('[data-brent-widget-script]').forEach((script) => script.remove());
       brentWidgetCard.classList.toggle('brent-widget-card--mobile', isMobile);
 
-      const widget = isMobile ? mobileBrentWidget : desktopBrentWidget;
+      // Use TradingView lightweight chart HTML embed instead of widget
+      let embedHTML = '';
       
-      // Create a div to hold the widget with proper data attributes
-      const widgetDiv = document.createElement('div');
-      widgetDiv.className = 'tradingview-widget';
-      
-      // Store configuration in data attribute (CSP-safe approach)
-      widgetDiv.setAttribute('data-widget-config', JSON.stringify(widget.config));
-      
-      widgetTarget.appendChild(widgetDiv);
-
-      // Load TradingView script
-      const widgetScript = document.createElement('script');
-      widgetScript.type = 'text/javascript';
-      widgetScript.src = widget.src;
-      widgetScript.async = true;
-      widgetScript.dataset.brentWidgetScript = variant;
-      
-      widgetScript.onerror = () => {
-        console.error('Failed to load TradingView widget script');
-        showBrentFallback();
-      };
-      
-      widgetScript.onload = () => {
-        // Give TradingView widget time to render
-        widgetLoadTimeout = window.setTimeout(() => {
-          if (!widgetTarget.querySelector('iframe')) {
-            console.warn('TradingView widget iframe not found after timeout');
-            showBrentFallback();
-          }
-        }, 8000);
-      };
-      
-      // Check if TradingView global is available
-      if (window.TradingView) {
-        // If already loaded, trigger widget creation immediately
-        if (window.TradingView.widget) {
-          new window.TradingView.widget(widget.config);
-        }
+      if (isMobile) {
+        // Mobile: lightweight embed
+        embedHTML = `
+          <iframe 
+            src="https://www.tradingview.com/widgetembed/?symbol=TVC%3AUKOIL&interval=D&hidesidetoolbar=1&symboledit=1&toolbarbg=f1f3f6&studies=&theme=dark&style=1&timezone=Etc%2FUTC&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=&utm_medium=&utm_campaign=" 
+            style="width: 100%; height: 100%; border: none; margin: 0; padding: 0;"
+            allowtransparency="true"
+            scrolling="no"
+            frameborder="0"
+            title="Brent Crude Oil Chart">
+          </iframe>
+        `;
       } else {
-        // Otherwise append the script to trigger loading
-        widgetContainer.appendChild(widgetScript);
+        // Desktop: full featured embed
+        embedHTML = `
+          <iframe 
+            src="https://www.tradingview.com/widgetembed/?symbol=TVC%3AUKOIL&interval=D&hidesidetoolbar=0&symboledit=1&toolbarbg=f1f3f6&studies=&theme=dark&style=1&timezone=Etc%2FUTC&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=&utm_medium=&utm_campaign=" 
+            style="width: 100%; height: 100%; border: none; margin: 0; padding: 0;"
+            allowtransparency="true"
+            scrolling="no"
+            frameborder="0"
+            title="Brent Crude Oil Chart">
+          </iframe>
+        `;
       }
+
+      widgetTarget.innerHTML = embedHTML;
+
+      // Set timeout to show fallback if iframe doesn't load
+      fallbackTimer = window.setTimeout(() => {
+        if (!widgetTarget.querySelector('iframe')) {
+          console.warn('TradingView widget failed to load');
+          showBrentFallback();
+        }
+      }, 6000);
     };
 
     const loadBrentWidget = () => renderBrentWidget();
