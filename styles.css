@@ -2000,6 +2000,10 @@ body.fade-out {
   color: #f5c16c;
 }
 
+.brent-widget-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .brent-price-section {
     padding: 74px 18px;
@@ -2009,8 +2013,13 @@ body.fade-out {
     font-size: 0.98rem;
   }
 
-  .brent-widget-card {
-    height: 420px;
+  .brent-widget-desktop {
+    display: none;
+  }
+
+  .brent-widget-mobile {
+    display: block;
+    height: 360px;
     padding: 10px;
     border-radius: 18px;
   }

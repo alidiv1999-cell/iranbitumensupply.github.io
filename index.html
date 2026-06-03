@@ -322,8 +322,8 @@
       </p>
     </div>
 
-    <div class="brent-widget-card">
-      <!-- TradingView Widget BEGIN -->
+    <div class="brent-widget-card brent-widget-desktop">
+      <!-- TradingView Desktop Widget BEGIN -->
       <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
         <div class="tradingview-widget-copyright">
@@ -384,7 +384,36 @@
         }
         </script>
       </div>
-      <!-- TradingView Widget END -->
+      <!-- TradingView Desktop Widget END -->
+    </div>
+
+    <div class="brent-widget-card brent-widget-mobile" aria-label="Mobile Brent crude oil price chart">
+      <!-- TradingView Mobile Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a href="https://www.tradingview.com/symbols/UKOIL/" rel="noopener nofollow" target="_blank">
+            <span class="blue-text">Brent crude oil price</span>
+          </a>
+          <span class="trademark"> by TradingView</span>
+        </div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        {
+          "symbol": "TVC:UKOIL",
+          "chartOnly": false,
+          "dateRange": "12M",
+          "noTimeScale": false,
+          "colorTheme": "dark",
+          "isTransparent": false,
+          "locale": "en",
+          "backgroundColor": "#101010",
+          "autosize": true,
+          "width": "100%",
+          "height": "100%"
+        }
+        </script>
+      </div>
+      <!-- TradingView Mobile Widget END -->
     </div>
   </div>
 </section>
