@@ -23,8 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (brentWidgetCard) {
     const widgetContainer = brentWidgetCard.querySelector('.tradingview-widget-container');
     const widgetTarget = brentWidgetCard.querySelector('[data-brent-widget-target]');
+    const fallbackPanel = brentWidgetCard.querySelector('[data-brent-widget-fallback]');
+    const retryButton = brentWidgetCard.querySelector('[data-brent-widget-retry]');
     const mobileMediaQuery = window.matchMedia('(max-width: 768px)');
     let activeBrentWidgetVariant = '';
+    let fallbackTimer;
 
     const desktopBrentWidget = {
       src: 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js',
@@ -96,15 +99,28 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     };
 
-    const renderBrentWidget = () => {
+    const showBrentFallback = () => {
+      activeBrentWidgetVariant = '';
+      widgetTarget.hidden = true;
+      fallbackPanel.hidden = false;
+    };
+
+    const hideBrentFallback = () => {
+      widgetTarget.hidden = false;
+      fallbackPanel.hidden = true;
+    };
+
+    const renderBrentWidget = (force = false) => {
       const isMobile = mobileMediaQuery.matches;
       const variant = isMobile ? 'mobile' : 'desktop';
 
-      if (variant === activeBrentWidgetVariant || !widgetContainer || !widgetTarget) {
+      if ((variant === activeBrentWidgetVariant && !force) || !widgetContainer || !widgetTarget || !fallbackPanel) {
         return;
       }
 
       activeBrentWidgetVariant = variant;
+      clearTimeout(fallbackTimer);
+      hideBrentFallback();
       widgetTarget.innerHTML = '';
       widgetContainer.querySelectorAll('[data-brent-widget-script]').forEach((script) => script.remove());
       brentWidgetCard.classList.toggle('brent-widget-card--mobile', isMobile);
@@ -116,15 +132,32 @@ document.addEventListener('DOMContentLoaded', () => {
       widgetScript.async = true;
       widgetScript.dataset.brentWidgetScript = variant;
       widgetScript.text = JSON.stringify(widget.config, null, 2);
+      widgetScript.onerror = showBrentFallback;
+      widgetScript.onload = () => {
+        fallbackTimer = window.setTimeout(() => {
+          if (!widgetTarget.querySelector('iframe')) {
+            showBrentFallback();
+          }
+        }, 8000);
+      };
       widgetContainer.appendChild(widgetScript);
     };
 
-    renderBrentWidget();
+    const loadBrentWidget = () => renderBrentWidget();
 
-    if (typeof mobileMediaQuery.addEventListener === 'function') {
-      mobileMediaQuery.addEventListener('change', renderBrentWidget);
-    } else if (typeof mobileMediaQuery.addListener === 'function') {
-      mobileMediaQuery.addListener(renderBrentWidget);
+    retryButton.addEventListener('click', () => renderBrentWidget(true));
+
+    if ('IntersectionObserver' in window) {
+      const brentWidgetObserver = new IntersectionObserver((entries, observerInstance) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          loadBrentWidget();
+          observerInstance.disconnect();
+        }
+      }, { rootMargin: '300px 0px' });
+
+      brentWidgetObserver.observe(brentWidgetCard);
+    } else {
+      loadBrentWidget();
     }
   }
 

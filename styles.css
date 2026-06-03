@@ -1960,6 +1960,7 @@ body.fade-out {
 }
 
 .brent-widget-card {
+  position: relative;
   width: min(100%, 920px);
   height: 470px;
   margin: 0 auto;
@@ -2000,6 +2001,68 @@ body.fade-out {
   color: #f5c16c;
 }
 
+.brent-widget-fallback {
+  position: absolute;
+  inset: 14px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 28px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(16, 16, 16, 0.96), rgba(23, 23, 23, 0.96));
+  text-align: center;
+}
+
+.brent-widget-fallback[hidden] {
+  display: none;
+}
+
+.brent-widget-fallback h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.brent-widget-fallback p {
+  max-width: 520px;
+  color: #cfcfcf;
+  font-size: 0.98rem;
+}
+
+.brent-widget-fallback__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.brent-widget-fallback__actions button,
+.brent-widget-fallback__actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.brent-widget-fallback__actions button {
+  border: 0;
+  background: #25d366;
+  color: #050505;
+  cursor: pointer;
+}
+
+.brent-widget-fallback__actions a {
+  border: 1px solid rgba(245, 193, 108, 0.5);
+  color: #f5c16c;
+}
+
+
 @media (max-width: 768px) {
   .brent-price-section {
     padding: 74px 18px;
@@ -2013,5 +2076,10 @@ body.fade-out {
     height: 360px;
     padding: 10px;
     border-radius: 18px;
+  }
+
+  .brent-widget-fallback {
+    inset: 10px;
+    padding: 22px;
   }
 }
