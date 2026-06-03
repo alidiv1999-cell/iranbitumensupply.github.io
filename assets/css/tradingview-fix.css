@@ -1,0 +1,20 @@
+/* tradingview-fix.css
+   Adjust TradingView widget attribution so it doesn't overlap the month labels on the Brent chart.
+   Tweak the `bottom` value if you need to move it further down or up. */
+
+.tradingview-widget-container { position: relative; }
+
+.tradingview-widget-copyright {
+  position: absolute !important;
+  bottom: 18px !important; /* increase to move lower, decrease to move up */
+  left: 14px !important;   /* keep it inset from the left edge */
+  transform: none !important;
+  pointer-events: auto !important; /* keep links clickable */
+  z-index: 5 !important;
+  background: transparent !important; /* ensure no opaque backgrounds */
+}
+
+/* Make attribution slightly larger on small screens to avoid overlap */
+@media (max-width: 480px) {
+  .tradingview-widget-copyright { bottom: 24px !important; left: 8px !important; }
+}
