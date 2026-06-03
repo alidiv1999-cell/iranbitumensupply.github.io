@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMediaQuery = window.matchMedia('(max-width: 768px)');
     let activeBrentWidgetVariant = '';
     let fallbackTimer;
+    let widgetLoadTimeout;
 
     const desktopBrentWidget = {
       src: 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js',
@@ -78,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         noTimeScale: false,
         hideDateRanges: false,
         hideMarketStatus: false,
-        hideSymbolLogo: false,
       },
     };
 
@@ -120,27 +120,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
       activeBrentWidgetVariant = variant;
       clearTimeout(fallbackTimer);
+      clearTimeout(widgetLoadTimeout);
       hideBrentFallback();
       widgetTarget.innerHTML = '';
       widgetContainer.querySelectorAll('[data-brent-widget-script]').forEach((script) => script.remove());
       brentWidgetCard.classList.toggle('brent-widget-card--mobile', isMobile);
 
       const widget = isMobile ? mobileBrentWidget : desktopBrentWidget;
+      
+      // Create a div to hold the widget with proper data attributes
+      const widgetDiv = document.createElement('div');
+      widgetDiv.className = 'tradingview-widget';
+      
+      // Store configuration in data attribute (CSP-safe approach)
+      widgetDiv.setAttribute('data-widget-config', JSON.stringify(widget.config));
+      
+      widgetTarget.appendChild(widgetDiv);
+
+      // Load TradingView script
       const widgetScript = document.createElement('script');
       widgetScript.type = 'text/javascript';
       widgetScript.src = widget.src;
       widgetScript.async = true;
       widgetScript.dataset.brentWidgetScript = variant;
-      widgetScript.text = JSON.stringify(widget.config, null, 2);
-      widgetScript.onerror = showBrentFallback;
+      
+      widgetScript.onerror = () => {
+        console.error('Failed to load TradingView widget script');
+        showBrentFallback();
+      };
+      
       widgetScript.onload = () => {
-        fallbackTimer = window.setTimeout(() => {
+        // Give TradingView widget time to render
+        widgetLoadTimeout = window.setTimeout(() => {
           if (!widgetTarget.querySelector('iframe')) {
+            console.warn('TradingView widget iframe not found after timeout');
             showBrentFallback();
           }
         }, 8000);
       };
-      widgetContainer.appendChild(widgetScript);
+      
+      // Check if TradingView global is available
+      if (window.TradingView) {
+        // If already loaded, trigger widget creation immediately
+        if (window.TradingView.widget) {
+          new window.TradingView.widget(widget.config);
+        }
+      } else {
+        // Otherwise append the script to trigger loading
+        widgetContainer.appendChild(widgetScript);
+      }
     };
 
     const loadBrentWidget = () => renderBrentWidget();
