@@ -2084,13 +2084,13 @@ body.fade-out {
   }
 }
 
-.x-contact {
+.social-contact {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.x-logo {
+.social-logo {
   width: 18px;
   height: 18px;
 }
