@@ -2087,8 +2087,8 @@ body.fade-out {
 .social-contact {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin: 2px 0;
+  gap: 3px;
+  margin: 0;
 }
 
 .social-logo {
