@@ -2084,16 +2084,11 @@ body.fade-out {
   }
 }
 
-.social-group {
-  margin: 0;
-  padding: 0;
-}
-
 .social-contact {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 2px 0;
+  margin: 2px;
 }
 
 .social-logo {
