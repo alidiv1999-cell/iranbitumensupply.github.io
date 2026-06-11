@@ -849,7 +849,7 @@ nav {
 }
 
 .contact-info {
-  margin-bottom: 12px; /* keeps spacing between email and WhatsApp */
+  margin-bottom: 2px 0; /* keeps spacing between email and WhatsApp */
 }
 
 /* Add space above the email line */
