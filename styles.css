@@ -866,6 +866,7 @@ nav {
 .contact-social .social-logo {
   width: 22px;
   height: 22px;
+  margin: 0;
   object-fit: contain;
   flex-shrink: 0;
 }
