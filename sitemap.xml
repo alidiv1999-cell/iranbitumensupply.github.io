@@ -277,10 +277,6 @@
     <priority>0.7</priority>
   </url>
 
-  <url>
-    <loc>https://www.iranbitumensupply.com/related-commodities/en590-10ppm-diesel.html</loc>
-    <priority>0.7</priority>
-  </url>
 
   <url>
     <loc>https://www.iranbitumensupply.com/related-commodities/granular-sulfur.html</loc>
@@ -302,19 +298,11 @@
     <priority>0.7</priority>
   </url>
 
-  <url>
-    <loc>https://www.iranbitumensupply.com/related-commodities/lng-liquefied-natural-gas.html</loc>
-    <priority>0.7</priority>
-  </url>
 
   <url>
     <loc>https://www.iranbitumensupply.com/related-commodities/slack-wax.html</loc>
     <priority>0.7</priority>
   </url>
 
-  <url>
-    <loc>https://www.iranbitumensupply.com/related-commodities/crude-oil.html</loc>
-    <priority>0.7</priority>
-  </url>
 
 </urlset>
