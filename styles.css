@@ -140,7 +140,7 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
-  padding: 35px 10%;
+  padding: 20px 10%;
 }
 
 .content.split.reverse {
