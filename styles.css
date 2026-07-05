@@ -2184,8 +2184,6 @@ body.fade-out {
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.68), 0 0 32px rgba(245, 193, 108, 0.12);
 }
 
-.premium-price-card:hover::after { transform: translateX(120%); }
-
 .featured-price-card {
   border-color: rgba(37, 211, 102, 0.35);
   box-shadow: 0 22px 58px rgba(0, 0, 0, 0.5), 0 0 28px rgba(37, 211, 102, 0.08);
