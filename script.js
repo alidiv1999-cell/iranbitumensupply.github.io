@@ -125,81 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const withPrefix = (path) => `${pathPrefix}${path}`;
 
   const dropdownMenus = {
-    'products.html': {
-      label: 'Product categories',
-      columns: [
-        {
-          heading: 'Penetration grades',
-          links: [
-            ['Bitumen 60/70', 'products/bitumen-60-70.html'],
-            ['Bitumen 80/100', 'products/bitumen-80-100.html'],
-            ['Bitumen 40/50', 'products/bitumen-40-50.html'],
-            ['Bitumen 30/40', 'products/bitumen-30-40.html'],
-            ['Bitumen 200/300', 'products/bitumen-200-300.html'],
-          ],
-        },
-        {
-          heading: 'Viscosity & oxidized',
-          links: [
-            ['VG 10', 'products/bitumen-vg-10.html'],
-            ['VG 20', 'products/bitumen-vg-20.html'],
-            ['VG 30', 'products/bitumen-vg-30.html'],
-            ['VG 40', 'products/bitumen-vg-40.html'],
-            ['R 85/25', 'products/bitumen-r85-25.html'],
-            ['R 90/15', 'products/bitumen-r90-15.html'],
-            ['R 115/15', 'products/bitumen-r115-15.html'],
-          ],
-        },
-        {
-          heading: 'Modified bitumen',
-          links: [
-            ['PMB Elastomeric', 'products/elastomeric-pmb.html'],
-            ['PMB Plastomeric', 'products/plastomeric-pmb.html'],
-            ['PMB Hybrid', 'products/hybrid-pmb.html'],
-            ['CRMB 50', 'products/crmb-50-cold-climate.html'],
-            ['CRMB 55', 'products/crmb-55-moderate-climate.html'],
-            ['CRMB 60', 'products/crmb-60-warm-climate.html'],
-          ],
-        },
-        {
-          heading: 'Performance grade',
-          links: [
-            ['PG 70-16', 'products/pg70-16.html'],
-            ['PG 70-10', 'products/pg70-10.html'],
-            ['PG 64-16', 'products/pg64-16.html'],
-            ['PG 64-22', 'products/pg64-22.html'],
-            ['PG 58-34', 'products/pg58-34.html'],
-          ],
-        },
-        {
-          heading: 'MC cutback Bitumen',
-          links: [
-            ['MC-30 Bitumen', 'products/mc-30-bitumen.html'],
-            ['MC-70 Bitumen', 'products/mc-70-bitumen.html'],
-            ['MC-250 Bitumen', 'products/mc-250-bitumen.html'],
-            ['MC-800 Bitumen', 'products/mc-800-bitumen.html'],
-          ],
-        },
-        {
-          heading: 'RC cutback Bitumen',
-          links: [
-            ['RC70', 'products/rc70.html'],
-            ['RC250', 'products/rc250.html'],
-            ['RC800', 'products/rc800.html'],
-            ['RC3000', 'products/rc3000.html'],
-          ],
-        },
-        {
-          heading: 'SC cutback Bitumen',
-          links: [
-            ['SC70', 'products/sc70.html'],
-            ['SC250', 'products/sc250.html'],
-            ['SC800', 'products/sc800.html'],
-            ['SC3000', 'products/sc3000.html'],
-          ],
-        },
-      ],
-    },
     'packagings.html': {
       label: 'Packaging options',
       columns: [
@@ -210,39 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ['Jumbo bags', 'packagings/jumbo-bags.html'],
             ['Flexitank', 'packagings/flexitank.html'],
             ['Bulk shipment', 'packagings/bulk-shipment.html'],
-          ],
-        },
-      ],
-    },
-    'blog.html': {
-      label: 'Latest guides',
-      columns: [
-        {
-          heading: 'Bitumen knowledge hub',
-          links: [
-            ['What is bitumen?', 'blog/what-is-bitumen.html'],
-            ['Bitumen grades explained', 'blog/bitumen-grades-explained.html'],
-            ['Packaging options', 'blog/bitumen-packaging-options.html'],
-            ['Incoterms 2020 for bitumen', 'blog/incoterms-2020-bitumen.html'],
-            ['Common import mistakes', 'blog/common-import-mistakes.html'],
-            ['Global bitumen trends', 'blog/global-bitumen-trends.html'],
-            ['Reliable supplier guide', 'blog/reliable-bitumen-supplier.html'],
-          ],
-        },
-      ],
-    },
-    'related-commodities.html': {
-      label: 'Commodity categories',
-      columns: [
-        {
-          heading: 'All related commodities',
-          links: [
-            ['Micronized gilsonite', 'related-commodities/micronized-gilsonite-powder.html'],
-            ['Granular sulfur', 'related-commodities/granular-sulfur.html'],
-            ['Urea 46 fertilizer', 'related-commodities/urea-46-fertilizer.html'],
-            ['LPG (Liquefied Petroleum Gas)', 'related-commodities/lpg-liquefied-petroleum-gas.html'],
-            ['Base Oil SN 500', 'related-commodities/base-oil-sn-500.html'],
-            ['Slack wax', 'related-commodities/slack-wax.html'],
           ],
         },
       ],
@@ -290,13 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const wrapper = document.createElement('div');
     wrapper.className = 'nav-dropdown';
 
-    if (menuKey === 'products.html') {
-      wrapper.classList.add('nav-dropdown--wide');
-    }
 
-    if (menuKey === 'related-commodities.html') {
-      wrapper.classList.add('nav-dropdown--right');
-    }
 
     link.classList.add('nav-dropdown-trigger');
     link.setAttribute('aria-haspopup', 'true');
