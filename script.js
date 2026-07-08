@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  const isNestedPage = /\/(products|packagings|blog|related-commodities)\//.test(window.location.pathname);
+  const isNestedPage = /\/(products|packagings|blog|related-commodities|export-markets)\//.test(window.location.pathname);
   const pathPrefix = isNestedPage ? '../' : '';
   const withPrefix = (path) => `${pathPrefix}${path}`;
 
